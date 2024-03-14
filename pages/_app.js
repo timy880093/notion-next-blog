@@ -19,6 +19,7 @@ import useAdjustStyle from '@/hooks/useAdjustStyle'
 import ExternalPlugins from '@/components/ExternalPlugins'
 import GlobalHead from '@/components/GlobalHead'
 import BLOG from '@/blog.config'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 /**
  * App挂载DOM 入口文件
@@ -49,6 +50,7 @@ const MyApp = ({ Component, pageProps }) => {
       <GLayout {...pageProps}>
         <GlobalHead {...pageProps}/>
         <Component {...pageProps} />
+        <SpeedInsights />
       </GLayout>
       <ExternalPlugins {...pageProps} />
     </GlobalContextProvider>
